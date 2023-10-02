@@ -4,7 +4,6 @@ var apellido2 = prompt("Introduzca su segundo apellido");
 
 var nombreCompleto = nombre+apellido1+apellido2;
 
-nombreCompleto.replace(" ","");
 alert(nombreCompleto.length);
 alert(nombre.toLowerCase()+" "+apellido1.toLowerCase()+" "+apellido2.toLowerCase());
 alert(nombre.toUpperCase()+" "+apellido1.toUpperCase()+" "+apellido2.toUpperCase());
