@@ -1,56 +1,22 @@
+var nombre = prompt("Introduzca su nombre");
+var apellido1 = prompt("Introduzca su primer apellido");
+var apellido2 = prompt("Introduzca su segundo apellido");
 
-var nombreCompleto = prompt("Escriba su nombre completo");
+var nombreCompleto = nombre+apellido1+apellido2;
 
-function contar(nombreC){
+nombreCompleto.replace(" ","");
+alert(nombreCompleto.length);
+alert(nombre.toLowerCase()+" "+apellido1.toLowerCase()+" "+apellido2.toLowerCase());
+alert(nombre.toUpperCase()+" "+apellido1.toUpperCase()+" "+apellido2.toUpperCase());
 
-    var contadorBlancos = 0;
+alert("Nombre:" +nombre+"\n"+
+"Apellido 1:" +apellido1+"\n"+
+"Apellido2:" +apellido2);
 
-    for (var i=0;i<nombreC.length;i++){
-        if(nombreC.charAt(i)==" "){
-            contadorBlancos++;
-        }
-    }
-    return nombreC.length-contadorBlancos;
+var usuario = nombre.toLowerCase()+apellido1.charAt(0).toLowerCase()+apellido2.charAt(0).toLowerCase();
 
-}
+alert(nombre+" "+apellido1+" " + apellido2 +" una propuesta sería " +usuario);
 
+var usuario2 = nombre.slice(0,2).toLowerCase()+apellido1.slice(0,2).toLowerCase()+apellido2.slice(0,2).toLowerCase();
 
-function mayusculas(nombreC){
-    return nombreC.toUpperCase();
-}
-
-function minusculas(nombreC){
-    return nombreC.toLowerCase();
-}
-
-function imprimir(nombreC){
-    var lista = nombreC.split(" ");
-    console.log("Nombre: "+lista[0]);
-    console.log("Apellido 1: "+lista[1]);
-    console.log("Apellido 2: "+lista[2]);
-}
-
-function propuestaUsuario(nombreC){
-    nombreC = nombreC.toLowerCase();
-    var lista = nombreC.split(" ");
-    var nombreUsuario1 = lista[0]+(lista[1].charAt(0))+(lista[2].charAt(0));
-    var nombreUsuario2 = (lista[0].slice(0,2))+(lista[1].slice(0,2))+(lista[2].slice(0,2));
-    console.log("Nombre de usuario recomendado 1: "+nombreUsuario1);
-    console.log("Nombre de usuario recomendado 2: "+nombreUsuario2);
-}
-function contrasenia(nombreC){
-    nombreC = nombreC.toLowerCase();
-    var lista =nombreC.split(" ");
-    var contrasenia="";
-    for(var i=0;i<lista[0].length;i++){
-        contrasenia += lista[0].charAt(i)+i;
-    }
-    return contrasenia;
-}
-
-console.log(contar(nombreCompleto));
-console.log(mayusculas(nombreCompleto));
-console.log(minusculas(nombreCompleto));
-imprimir(nombreCompleto);
-propuestaUsuario(nombreCompleto);
-console.log(contrasenia(nombreCompleto));
+alert(nombre+" "+apellido1+" " + apellido2 +" otra propuesta sería " +usuario2);
